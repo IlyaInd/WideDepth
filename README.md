@@ -1,6 +1,6 @@
 # WideDepth Benchmark: Millimeter-Accurate Fisheye Depth Estimation for Indoor Robotics
 
-[Paper](./ICRA26_3467_MS.pdf) |  [Project Page](https://ilyaind.github.io/widedepth/) | [Dataset Download](TBD)
+[Paper](./ICRA26_3467_MS.pdf) |  [Project Page](https://ilyaind.github.io/WideDepth/) | [Dataset Download](TBD)
 
 <p align="center">
   <img src="static/images/table_1.png" width="900" alt="WideDepth teaser">
