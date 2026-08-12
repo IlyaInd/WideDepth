@@ -1,0 +1,4 @@
+numpy>=1.24,<3
+opencv-python-headless>=4.8,<5
+matplotlib>=3.9,<4
+huggingface-hub>=0.23,<2
