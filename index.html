@@ -139,11 +139,11 @@
   <link rel="icon" type="image/x-icon" href="static/images/widedepth_favicon.ico">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/index.css?v=48c42187">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
-  <script defer src="static/js/index.js"></script>
+  <script defer src="static/js/index.js?v=fa178992"></script>
 
 </head>
 <body>
@@ -316,6 +316,78 @@
                 </tbody>
               </table>
             </div>
+            <ul class="dataset-cards">
+              <li class="dataset-card is-ours">
+                <h4>WideDepth benchmark <span class="col-note">(ours)</span></h4>
+                <p class="dataset-specs">Real · Indoor · 2048×1152<br>120–195° HFOV · ±1&nbsp;mm at 10&nbsp;m</p>
+                <ul class="dataset-features">
+                  <li class="yes"><span class="mark-yes" aria-hidden="true">✓</span> Horizontal stereo<span class="visually-hidden">: yes</span></li>
+                  <li class="yes"><span class="mark-yes" aria-hidden="true">✓</span> Vertical stereo<span class="visually-hidden">: yes</span></li>
+                  <li class="yes"><span class="mark-yes" aria-hidden="true">✓</span> Pinhole<span class="visually-hidden">: yes</span></li>
+                  <li class="yes"><span class="mark-yes" aria-hidden="true">✓</span> Dense depth map<span class="visually-hidden">: yes</span></li>
+                </ul>
+              </li>
+              <li class="dataset-card is-ours">
+                <h4>WideDepth train <span class="col-note">(ours)</span></h4>
+                <p class="dataset-specs">Real · Outdoor · 1920×1080<br>180° HFOV · ±20&nbsp;mm at 10&nbsp;m</p>
+                <ul class="dataset-features">
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Horizontal stereo<span class="visually-hidden">: no</span></li>
+                  <li class="yes"><span class="mark-yes" aria-hidden="true">✓</span> Vertical stereo<span class="visually-hidden">: yes</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Pinhole<span class="visually-hidden">: no</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Dense depth map<span class="visually-hidden">: no</span></li>
+                </ul>
+              </li>
+              <li class="dataset-card">
+                <h4>OmniScape</h4>
+                <p class="dataset-specs">Synthetic · Outdoor · 1024×1024<br>185° HFOV · precision not reported</p>
+                <ul class="dataset-features">
+                  <li class="yes"><span class="mark-yes" aria-hidden="true">✓</span> Horizontal stereo<span class="visually-hidden">: yes</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Vertical stereo<span class="visually-hidden">: no</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Pinhole<span class="visually-hidden">: no</span></li>
+                  <li class="yes"><span class="mark-yes" aria-hidden="true">✓</span> Dense depth map<span class="visually-hidden">: yes</span></li>
+                </ul>
+              </li>
+              <li class="dataset-card">
+                <h4>SynWoodScape</h4>
+                <p class="dataset-specs">Synthetic · Outdoor · 1280×966<br>190° HFOV · precision not reported</p>
+                <ul class="dataset-features">
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Horizontal stereo<span class="visually-hidden">: no</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Vertical stereo<span class="visually-hidden">: no</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Pinhole<span class="visually-hidden">: no</span></li>
+                  <li class="yes"><span class="mark-yes" aria-hidden="true">✓</span> Dense depth map<span class="visually-hidden">: yes</span></li>
+                </ul>
+              </li>
+              <li class="dataset-card">
+                <h4>Oxford RobotCar</h4>
+                <p class="dataset-specs">Real · Outdoor · 1024×1024<br>180° HFOV · ±30&nbsp;mm at 10&nbsp;m</p>
+                <ul class="dataset-features">
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Horizontal stereo<span class="visually-hidden">: no</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Vertical stereo<span class="visually-hidden">: no</span></li>
+                  <li class="yes"><span class="mark-yes" aria-hidden="true">✓</span> Pinhole<span class="visually-hidden">: yes</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Dense depth map<span class="visually-hidden">: no</span></li>
+                </ul>
+              </li>
+              <li class="dataset-card">
+                <h4>KITTI-360</h4>
+                <p class="dataset-specs">Real · Outdoor · 1400×1400<br>180° HFOV · ±20&nbsp;mm at 10&nbsp;m</p>
+                <ul class="dataset-features">
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Horizontal stereo<span class="visually-hidden">: no</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Vertical stereo<span class="visually-hidden">: no</span></li>
+                  <li class="yes"><span class="mark-yes" aria-hidden="true">✓</span> Pinhole<span class="visually-hidden">: yes</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Dense depth map<span class="visually-hidden">: no</span></li>
+                </ul>
+              </li>
+              <li class="dataset-card">
+                <h4>WoodScape</h4>
+                <p class="dataset-specs">Real · Outdoor · 1280×966<br>190° HFOV · ±20&nbsp;mm at 10&nbsp;m</p>
+                <ul class="dataset-features">
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Horizontal stereo<span class="visually-hidden">: no</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Vertical stereo<span class="visually-hidden">: no</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Pinhole<span class="visually-hidden">: no</span></li>
+                  <li class="no"><span class="mark-no" aria-hidden="true">✗</span> Dense depth map<span class="visually-hidden">: no</span></li>
+                </ul>
+              </li>
+            </ul>
           <figcaption>Our benchmark offers unparalleled precision of depth maps, leveraging varying FOV and high-resolution images, surpassing all existing fisheye datasets.
           Our training dataset is the first-ever with a vertical stereo setup.</figcaption>
         </figure>
