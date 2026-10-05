@@ -246,12 +246,12 @@
     <div class="hero-body">
 
       <figure>
-          <a class="figure-link" href="static/images/banner.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: WideDepth pipeline overview">
+          <a class="figure-link" href="static/images/banner.jpg" target="_blank" rel="noopener noreferrer" aria-label="View full screen: WideDepth pipeline overview">
             <img src="static/images/banner-1920.webp"
               srcset="static/images/banner-960.webp 960w, static/images/banner-1920.webp 1920w, static/images/banner.webp 3420w"
               sizes="(min-width: 1024px) 912px, 100vw"
               width="3420" height="1850" alt="WideDepth pipeline overview" fetchpriority="high" decoding="async">
-            <span class="enlarge-hint" aria-hidden="true">Enlarge figure ↗</span>
+            <span class="enlarge-hint" aria-hidden="true">Full screen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></span>
           </a>
           <figcaption>Overview of our proposed pipeline for generating fisheye stereo RGB, depth, and disparity from LiDAR scans.</figcaption>
         </figure>
@@ -288,9 +288,9 @@
     <article class="item result" aria-labelledby="comparison-title">
       <h3 class="title is-4" id="comparison-title">Dataset comparison</h3>
       <figure>
-          <a class="figure-link" href="static/images/table_1.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Comparison table with other fisheye datasets">
+          <a class="figure-link" href="static/images/table_1.png" target="_blank" rel="noopener noreferrer" aria-label="View full screen: Comparison table with other fisheye datasets">
             <img src="static/images/table_1.webp" width="3106" height="726" alt="Comparison table with other fisheye datasets" loading="lazy" decoding="async">
-            <span class="enlarge-hint" aria-hidden="true">Enlarge figure ↗</span>
+            <span class="enlarge-hint" aria-hidden="true">Full screen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></span>
           </a>
           <figcaption>Our benchmark offers unparalleled precision of depth maps, leveraging varying FOV and high-resolution images, surpassing all existing fisheye datasets.
           Our training dataset is the first-ever with a vertical stereo setup.</figcaption>
@@ -299,9 +299,9 @@
     <article class="item result" aria-labelledby="stereo-title">
       <h3 class="title is-4" id="stereo-title">Stereo depth estimation</h3>
       <figure>
-          <a class="figure-link" href="static/images/stereo_qual_screenshot.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Stereo qualitative results">
+          <a class="figure-link" href="static/images/stereo_qual_screenshot.png" target="_blank" rel="noopener noreferrer" aria-label="View full screen: Stereo qualitative results">
             <img src="static/images/stereo_qual_screenshot.webp" width="2610" height="1142" alt="Stereo qualitative results" loading="lazy" decoding="async">
-            <span class="enlarge-hint" aria-hidden="true">Enlarge figure ↗</span>
+            <span class="enlarge-hint" aria-hidden="true">Full screen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></span>
           </a>
           <figcaption>Qualitative results for stereo with FOV 195 using the StereoBase model.
           The model shows no degradation from geometric distortion, demonstrating the success of our approach in adapting pinhole models to fisheye data.</figcaption>
@@ -310,9 +310,9 @@
     <article class="item result" aria-labelledby="mono-title">
       <h3 class="title is-4" id="mono-title">Monocular depth estimation</h3>
       <figure>
-          <a class="figure-link" href="static/images/mono_qualitative.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Monocular qualitative results">
+          <a class="figure-link" href="static/images/mono_qualitative.png" target="_blank" rel="noopener noreferrer" aria-label="View full screen: Monocular qualitative results">
             <img src="static/images/mono_qualitative.webp" width="1990" height="942" alt="Monocular qualitative results" loading="lazy" decoding="async">
-            <span class="enlarge-hint" aria-hidden="true">Enlarge figure ↗</span>
+            <span class="enlarge-hint" aria-hidden="true">Full screen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></span>
           </a>
           <figcaption>Comparison of the best and worst models on a 195-degree FOV.
          Despite its ability to distinguish small details well, Depth Anything V2 performs significantly worse in metric depth estimation on extremely wide angles compared to Depth Pro.</figcaption>
@@ -345,8 +345,10 @@
 
   <section id="citation" class="section" aria-labelledby="citation-title">
       <div class="container is-max-desktop">
-      <div class="citation-header"><h2 class="title is-3" id="citation-title">Citation</h2><button class="button" id="copy-citation" type="button" hidden>Copy BibTeX</button></div>
+      <h2 class="title is-3 has-text-centered" id="citation-title">Citation</h2>
       <p class="citation-intro">If you use WideDepth in your research, please cite our <a href="https://arxiv.org/abs/2605.24074">paper</a>.</p>
+      <div class="citation-block">
+      <button class="button copy-citation" id="copy-citation" type="button" aria-label="Copy BibTeX" hidden>Copy</button>
       <pre tabindex="0" aria-label="BibTeX citation"><code id="bibtex-code">@misc{indyk2026widedepth,
   title={WideDepth: Millimeter-Accurate Benchmark for Fisheye Depth Estimation},
   author={Ilia Indyk and Ignat Penshin and Ivan Sosin and Maxim Monastyrny
@@ -357,6 +359,7 @@
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2605.24074}
 }</code></pre>
+      </div>
       <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
     </div>
     </section>
