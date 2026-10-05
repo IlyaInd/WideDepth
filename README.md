@@ -1,6 +1,6 @@
 # WideDepth Benchmark: Millimeter-Accurate Fisheye Depth Estimation for Indoor Robotics
 
-[Paper](./ICRA26_3467_MS.pdf) |  [Project Page](https://ilyaind.github.io/WideDepth/) | [Dataset Download](TBD)
+[Paper](https://arxiv.org/abs/2605.24074) | [Project Page](https://ilyaind.github.io/WideDepth/) | [Benchmark](https://huggingface.co/datasets/IlyaInd/WideDepth) | [Train set](https://huggingface.co/datasets/IlyaInd/WideDepth-train) | [Code](https://github.com/IlyaInd/widedepth)
 
 <p align="center">
   <img src="static/images/table_1.png" width="900" alt="WideDepth teaser">
@@ -18,4 +18,7 @@ The benchmark supports three tasks: monocular depth estimation, stereo matching,
 WideDepth includes high-precision ground truth reconstructed from laser scans, a wide range of fields of view, multiple stereo baselines, both vertical and horizontal stereo configurations, and paired fisheye–pinhole image views.
 
 ## Dataset
-🚧 **Code and dataset will be released soon!**
+
+- **Benchmark** — 101 indoor scenes, 5K fisheye stereo pairs with millimeter-accurate depth and disparity: [IlyaInd/WideDepth](https://huggingface.co/datasets/IlyaInd/WideDepth)
+- **Train set** — 18K outdoor fisheye stereo pairs with LiDAR depth: [IlyaInd/WideDepth-train](https://huggingface.co/datasets/IlyaInd/WideDepth-train)
+- **Code** — [IlyaInd/widedepth](https://github.com/IlyaInd/widedepth)

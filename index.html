@@ -28,17 +28,19 @@
   <meta property="og:image" content="https://ilyaind.github.io/WideDepth/static/images/banner.jpg">
   <meta property="og:image:width" content="3420">
   <meta property="og:image:height" content="1850">
-  <meta property="og:image:alt" content="WideDepth - Research Preview">
+  <meta property="og:image:alt" content="WideDepth pipeline for generating fisheye stereo RGB, depth, and disparity from LiDAR scans">
   <meta property="article:published_time" content="2026-02-04T00:00:00.000Z">
   <meta property="article:author" content="Ilia Indyk">
   <meta property="article:section" content="Robotics">
   <meta property="article:tag" content="fisheye depth estimation">
   <meta property="article:tag" content="stereo vision">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WideDepth: Millimeter-Accurate Benchmark for Fisheye Depth Estimation">
   <meta name="twitter:description" content="WideDepth introduces the first millimeter-accurate indoor fisheye depth benchmark with 5K stereo pairs, adaptation methods for pinhole models and a large LiDAR-based training set.">
 
   <meta name="twitter:image" content="https://ilyaind.github.io/WideDepth/static/images/banner.jpg">
-  <meta name="twitter:image:alt" content="WideDepth - Research Preview">
+  <meta name="twitter:image:alt" content="WideDepth pipeline for generating fisheye stereo RGB, depth, and disparity from LiDAR scans">
 
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
@@ -50,8 +52,91 @@
 
   <title>WideDepth: Millimeter-Accurate Benchmark for Fisheye Depth Estimation</title>
 
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "WideDepth benchmark",
+      "description": "The first indoor benchmark for fisheye depth estimation: 101 scenes with 5K high-resolution fisheye stereo pairs labeled with millimeter-level ground-truth depth and disparity from high-resolution LiDAR scans. Covers fields of view from 120 to 195 degrees, multiple baselines, horizontal and vertical stereo, and paired pinhole views, for evaluating monocular depth, stereo matching, and depth completion.",
+      "url": "https://ilyaind.github.io/WideDepth/",
+      "sameAs": "https://huggingface.co/datasets/IlyaInd/WideDepth",
+      "keywords": [
+        "fisheye depth estimation",
+        "stereo matching",
+        "monocular depth estimation",
+        "depth completion",
+        "robotics",
+        "benchmark"
+      ],
+      "creator": [
+        { "@type": "Person", "name": "Ilia Indyk" },
+        { "@type": "Person", "name": "Ignat Penshin" },
+        { "@type": "Person", "name": "Ivan Sosin" },
+        { "@type": "Person", "name": "Maxim Monastyrny" },
+        { "@type": "Person", "name": "Aleksei Valenkov" },
+        { "@type": "Person", "name": "Ilya Makarov" }
+      ],
+      "citation": {
+        "@type": "ScholarlyArticle",
+        "name": "WideDepth: Millimeter-Accurate Benchmark for Fisheye Depth Estimation",
+        "url": "https://arxiv.org/abs/2605.24074"
+      },
+      "isAccessibleForFree": true,
+      "measurementTechnique": "Terrestrial laser scanning (LiDAR)",
+      "variableMeasured": [
+        "depth",
+        "disparity"
+      ],
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "Hugging Face",
+        "url": "https://huggingface.co/datasets"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "WideDepth train",
+      "description": "Outdoor fisheye stereo training set of 18K samples with LiDAR-derived sparse depth, released with the WideDepth benchmark for fine-tuning pinhole-trained stereo models on fisheye images.",
+      "url": "https://huggingface.co/datasets/IlyaInd/WideDepth-train",
+      "keywords": [
+        "fisheye depth estimation",
+        "stereo matching",
+        "domain adaptation",
+        "LiDAR",
+        "training data"
+      ],
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "creator": [
+        { "@type": "Person", "name": "Ilia Indyk" },
+        { "@type": "Person", "name": "Ignat Penshin" },
+        { "@type": "Person", "name": "Ivan Sosin" },
+        { "@type": "Person", "name": "Maxim Monastyrny" },
+        { "@type": "Person", "name": "Aleksei Valenkov" },
+        { "@type": "Person", "name": "Ilya Makarov" }
+      ],
+      "citation": {
+        "@type": "ScholarlyArticle",
+        "name": "WideDepth: Millimeter-Accurate Benchmark for Fisheye Depth Estimation",
+        "url": "https://arxiv.org/abs/2605.24074"
+      },
+      "isAccessibleForFree": true,
+      "measurementTechnique": "LiDAR",
+      "variableMeasured": [
+        "depth",
+        "disparity"
+      ],
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "Hugging Face",
+        "url": "https://huggingface.co/datasets"
+      }
+    }
+  ]
+  </script>
+
   <link rel="icon" type="image/x-icon" href="static/images/widedepth_favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/widedepth_favicon.ico">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
@@ -141,6 +226,15 @@
                 </a>
               </span>
             </div>
+
+            <ul class="key-stats" aria-label="WideDepth at a glance">
+              <li><strong>101</strong> <span>indoor scenes</span></li>
+              <li><strong>5K</strong> <span>fisheye stereo pairs</span></li>
+              <li><strong>±1&nbsp;mm</strong> <span>depth precision at 10&nbsp;m</span></li>
+              <li><strong>120–195°</strong> <span>field of view</span></li>
+              <li><strong>18K</strong> <span>LiDAR-labeled training pairs</span></li>
+              <li><strong><small>up to</small> −62%</strong> <span>stereo error after fine&#8209;tuning</span></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -153,7 +247,10 @@
 
       <figure>
           <a class="figure-link" href="static/images/banner.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge: WideDepth pipeline overview">
-            <img src="static/images/banner.webp" width="3420" height="1850" alt="WideDepth pipeline overview" fetchpriority="high" decoding="async">
+            <img src="static/images/banner-1920.webp"
+              srcset="static/images/banner-960.webp 960w, static/images/banner-1920.webp 1920w, static/images/banner.webp 3420w"
+              sizes="(min-width: 1024px) 912px, 100vw"
+              width="3420" height="1850" alt="WideDepth pipeline overview" fetchpriority="high" decoding="async">
             <span class="enlarge-hint" aria-hidden="true">Enlarge figure ↗</span>
           </a>
           <figcaption>Overview of our proposed pipeline for generating fisheye stereo RGB, depth, and disparity from LiDAR scans.</figcaption>
