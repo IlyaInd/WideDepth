@@ -457,18 +457,6 @@ table.comparison-table thead th:first-child { position: sticky; left: 0; z-index
 .comparison-table .mark-yes, .comparison-table .mark-no, .comparison-table .not-reported { font-size: 1rem; }
 .comparison-table .not-reported { color: #94a3b8; }
 
-/* Phones get one card per dataset instead of the wide table. */
-.dataset-cards { display: none; margin: 0; padding: 0; list-style: none; }
-.dataset-card { padding: .75rem .875rem; border: 1px solid var(--border-color); border-radius: var(--border-radius); }
-.dataset-card + .dataset-card { margin-top: .5rem; }
-.dataset-card.is-ours { background: #eff6ff; border-color: #bfdbfe; }
-.dataset-card h4 { margin: 0 0 .25rem; font-size: .95rem; font-weight: 600; line-height: 1.3; color: var(--text-primary); }
-.dataset-card.is-ours h4 { color: var(--primary-color); }
-.dataset-card .col-note { font-size: .8rem; font-weight: 500; color: var(--text-secondary); }
-.dataset-specs { margin: 0 0 .5rem; font-size: .85rem; line-height: 1.45; color: var(--text-primary); }
-.dataset-features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .2rem .75rem; margin: 0; padding: 0; list-style: none; font-size: .8rem; }
-.dataset-features .no { color: var(--text-secondary); }
-
 /* Key numbers strip under the hero buttons. */
 .key-stats { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .75rem; margin: 2rem 0 0; padding: 0; list-style: none; }
 .key-stats li { display: flex; flex-direction: column; gap: .25rem; padding: 1rem .5rem; border: 1px solid var(--border-color); border-radius: var(--border-radius); background: var(--background-secondary); }
@@ -482,11 +470,11 @@ table.comparison-table thead th:first-child { position: sticky; left: 0; z-index
   .key-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
-  /* Less nested padding so figures and dataset cards get the width. */
+  /* Give the scrolling table room on phones: less nested padding, slimmer pinned columns. */
   #results.section { padding-left: .75rem; padding-right: .75rem; }
   .results-list .item { margin: .5rem 0; padding: 1rem .75rem; }
-  .table-hint, .table-scroll { display: none; }
-  .dataset-cards { display: block; }
+  table.comparison-table th, table.comparison-table td { padding: .5rem .35rem; }
+  table.comparison-table tbody th { white-space: normal; min-width: 5.5rem; }
   .publication-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
   .publication-links .link-block { margin: 0; }
   .publication-links .button { width: 100%; margin: 0 !important; }
@@ -497,8 +485,8 @@ table.comparison-table thead th:first-child { position: sticky; left: 0; z-index
   .dialog-image { padding: .5rem; }
 }
 @media (max-width: 359px) {
-  .dataset-card { padding-left: .625rem; padding-right: .625rem; }
-  .dataset-features { gap: .2rem .5rem; font-size: .75rem; }
+  /* Too narrow for two pinned columns; let the benchmark column scroll with the rest. */
+  .comparison-table tr > :last-child { position: static; box-shadow: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
